@@ -7,7 +7,7 @@ import joblib
 import redis
 import news_list_produce
 
-r = redis.Redis(host='10.120.35.200', port=6379)
+r = redis.Redis(host=REDIS_HOST, port=6379)
 rf = joblib.load('C:/Users/Big data/Desktop/nlu_result/nlu_model.pkl')
 # data = pd.read_csv("C:/Users/Big data/Desktop/nlu_result/ori_data2.csv")
 data = pd.read_csv("C:/Users/Big data/Desktop/nlu_result/ori_data2.csv", chunksize=1)
